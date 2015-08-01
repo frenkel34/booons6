@@ -69,7 +69,8 @@
         }    
 
     </style>
-    <body>        
+    <body>
+
         <template id="template-select-UserLogin-item">
             <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
         </template>
@@ -120,11 +121,27 @@
         </style>
 <!------------------------------------------------------------------------------------------>
         <div class="appBrick" id="brickIdleGroup">
+            <div id="brickProgress">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active fa fa-users"></li>
+                    <li class="fa fa-coffee"></li>
+                    <li class="fa fa-bomb"></li>
+                </ul>
+            </div>
+
             <div class="jqFullButton colorShadeA1 idButtonStartRound"><i class="fa fa-play fa-3x"></i></div>
-                <div class="statIcon colorShadeB1" style="background-color: #;"><i class="fa fa-users fa-3x"></i></div>
-                <div class="statText colorShadeB2" style="background-color: #;">13</div>
-                <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-history fa-3x"></i></div>
-                <div class="statText colorShadeC2" style="background-color: #;">5:13</div>
+            <div class="statIcon colorShadeB1" style="background-color: #;"><i class="fa fa-users fa-3x"></i></div>
+            <div class="statText colorShadeB2" style="background-color: #;">13</div>
+            <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-history fa-3x"></i></div>
+            <div class="statText colorShadeC2" style="background-color: #;">5:13</div>
+            <div class="users">
+                <div class="row user">
+                    <div class="col-xs-10 username"><i class="fa fa-user"></i> Username</div>
+                    <div class="col-xs-2 booons"><i class="fa fa-coffee"></i> X</div>
+                    
+                </div>
+            </div>
         </div>
 <!------------------------------------------------------------------------------------------>
         <div class="appBrick" id="brickSlider">
@@ -134,33 +151,40 @@
         
 <!------------------------------------------------------------------------------------------>
         <template id="template-select-product-item">
-            <div class="jqItem jqProductItem colorShadeB1" code="{{value}}"></span><i class="fa fa-{{code}} fa-5x"></i></div>
+            <div class="jqItem jqProductItem" code="{{value}}"></span><i class="fa fa-{{code}} fa-5x"></i></div>
         </template>
         <template id="template-select-subproduct-item-0">
-            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-1">
-            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-2">
-            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-3">
-            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
 
         <div class="appBrick" id="brickSelectProduct">
+            <div id="brickProgress">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="fa fa-users"></li>
+                    <li class="active fa fa-coffee"></li>
+                    <li class="fa fa-bomb"></li>
+                </ul>
+            </div>
+
             <div class="jqFullButton colorShadeC1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
-            <div class="jqProductSliderGroup">
+            <div class="jqProductSliderGroup colorShadeB1">
             </div>
-            <div class="jqSubProductSliderGroup1">
+            <div class="jqSubProductSliderGroup1 colorShadeB2">
             </div>
-            <div class="jqSubProductSliderGroup2">
+            <div class="jqSubProductSliderGroup2 colorShadeB2">
             </div>
         </div>
 <script>
-
-    
     $('.jqProductItem').focus(function(){
        console.log('You have selected as a product:' + $(this).attr("code"));
     });
@@ -171,6 +195,13 @@
        console.log('You have selected:' + $(this).attr("code") +' milk');
     });
 </script>
+
+<!------------------------------------------------------------------------------------------>
+<div class="appBrick" id="brickSelectProduct">
+
+</div>
+
+
 <script>
     
     
