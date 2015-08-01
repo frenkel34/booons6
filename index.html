@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Booons Bootstrap</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="css/booons.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>    
+        <script type="text/javascript" src="slick/slick.min.js"></script>   
+    </head>
+    <style>
+
+        .jqRowContainer{
+            float:left;
+            height:75px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            width:100vw;
+        }
+        .jqButton {
+            width:100vw;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            height:75px;  
+        }
+        .buttonStart {
+            background-color: #B73438;
+            color: #fff;
+        }
+        .buttonLogin {
+            background-color: #B73438;
+            color: #fff;
+        }
+        .buttonNavToggle {
+            background-color: #3438B7;
+            color: #fff;
+        }
+        .jqNavSlideToggle{
+            text-align: center;
+            color: #337ab7;
+            margin-bottom:50px;
+        }
+        .jqNav{
+            background-color: #347AB7;
+            color:#fff;
+        }
+        a {
+            color:#fff;   
+        }
+        *:focus {
+            outline: 0;
+        }    
+
+    </style>
+    <body>        
+        <template id="template-select-UserLogin-item">
+            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
+        </template>
+        <template id="template-select-GroupLogin-item">
+            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
+        </template>
+
+        <div class="appBrick" id="brickLogin">      
+            <div class="jqFullButton colorShadeC1 idButtonLogin"><i class="fa fa-check fa-3x"></i></div>
+            <div class="jqUserLoginSliderGroup jqSliderGroup colorShadeA2"></div>
+            <div class="jqGroupLoginSliderGroup jqSliderGroup colorShadeB3"></div>
+        </div>
+        
+<!------------------------------------------------------------------------------------------>
+        <div class="appBrick" id="brickNav">
+            <div>
+                <div class="jqNav" style="display:none;">
+                    <div class="jqNavLogin"><i class="fa fa-refresh fa-2x"></i></div>
+                    <div class="jqNavGroupIdle"><i class="fa fa-cloud fa-2x"></i></div>
+                </div>
+            </div>
+            <div class="jqRowContainer" style="">
+                <div class="buttonNavToggle jqButton"><i class="fa fa-angle-double-down fa-3x"></i></div>
+            </div>
+        </div>
+        <script>
+            $(".jqNavLogin").click(function(){
+               console.log('goto: login'); 
+                $(".appBrick").hide();
+                $("#brickNav").show();
+                $("#brickLogin").show();
+            });
+            $(".jqNavGroupIdle").click(function(){
+               console.log('goto: idle group'); 
+                $(".appBrick").hide();
+                $("#brickNav").show();
+                $("#brickSelectProduct").show();
+            });
+            $(".buttonNavToggle").click(function(){
+                console.log("test");
+                $(".jqNav").slideToggle( "slow" );
+            });
+        </script>
+        <style>
+            .sliderGroup {
+                height:75px;
+            }
+        </style>
+<!------------------------------------------------------------------------------------------>
+        <div class="appBrick" id="brickIdleGroup">
+            <div class="jqFullButton colorShadeA1 idButtonStartRound"><i class="fa fa-play fa-3x"></i></div>
+                <div class="statIcon colorShadeB1" style="background-color: #;"><i class="fa fa-users fa-3x"></i></div>
+                <div class="statText colorShadeB2" style="background-color: #;">13</div>
+                <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-history fa-3x"></i></div>
+                <div class="statText colorShadeC2" style="background-color: #;">5:13</div>
+        </div>
+<!------------------------------------------------------------------------------------------>
+        <div class="appBrick" id="brickSlider">
+
+        Select
+        </div>
+        
+<!------------------------------------------------------------------------------------------>
+        <template id="template-select-product-item">
+            <div class="jqItem jqProductItem" code="{{value}}"><a href="#"></span><i class="fa fa-{{code}} fa-5x"></i></a></div>
+        </template>
+        <template id="template-select-subproduct-item-0">
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i></a></div>
+        </template>
+        <template id="template-select-subproduct-item-1">
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i></a></div>
+        </template>
+        <template id="template-select-subproduct-item-2">
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></a></div>
+        </template>
+        <template id="template-select-subproduct-item-3">
+            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></a></div>
+        </template>
+
+        <div class="appBrick" id="brickSelectProduct">
+            <div class="jqProductSliderGroup">
+            </div>
+            <div class="jqSubProductSliderGroup1">
+            </div>
+            <div class="jqSubProductSliderGroup2">
+            </div>
+        </div>
+<script>
+    $('.jqProductItem').focus(function(){
+       console.log('You have selected as a product:' + $(this).attr("code"));
+    });
+    $('.jqSugarItem').focus(function(){
+       console.log('You have selected:' + $(this).attr("code") +' sugar');
+    });
+    $('.jqMilkItem').focus(function(){
+       console.log('You have selected:' + $(this).attr("code") +' milk');
+    });
+</script>
+<script>
+    
+    
+    console.log('start app');
+    $(".appBrick").hide();
+    $("#brickLogin").show();
+    
+    $(".idButtonLogin").click(function(){
+        console.log('login');
+        $(".appBrick").hide();
+        $("#brickIdleGroup").show();
+    });
+    $(".idButtonStartRound").click(function(){
+        console.log('Start round');
+        $(".appBrick").hide();
+        $("#brickSelectProduct").show();
+    });
+</script>
+<script src="js/booons.js"></script>
+<script src="js/interactions.js"></script>
+        
+    
+    
+  </body>
+</html>
