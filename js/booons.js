@@ -14,16 +14,37 @@ function countdown(callback) {
     }, 1000);
 }
 
+function addItem(sTargetDiv, sTemplateId, sCode, sValue) {
+    var sTemplate = "";
+    sTemplate = $("#"+ sTemplateId).html();
+//    console.log(sTemplate);
+//    console.log(sCode);
+    
+    
+    sTemplate = sTemplate.replace("{{value}}", sValue);
+    sTemplate = sTemplate.replace("{{value}}", sValue);
+    sTemplate = sTemplate.replace("{{code}}", sCode);
+    sTemplate = sTemplate.replace("{{code}}", sCode);
+    sTemplate = sTemplate.replace("{{code}}", sCode);
+    sTemplate = sTemplate.replace("{{code}}", sCode);
+//    console.log(sTemplate);
+    sTest = $("."+ sTargetDiv).html();
+//    console.log(sTest)
+    $("."+ sTargetDiv).append(sTemplate);
+//    console.log('added an item');
+    
+}
+
 
 
 function addSelectProduct(sProductCode, sState, iSugar, iMilk){
     var sTemplate = "";
     var sCheckIcon = "";
     sTemplate = $("#template-select-product-item").html();
-    console.log('-------------------');
-    console.log(sTemplate);
+//    console.log('-------------------');//
+//    console.log(sTemplate);
     
-    console.log('-------------------');
+//    console.log('-------------------');
     if (sState == "Off") {
         sCheckIcon = "close"
     }else{
@@ -33,8 +54,18 @@ function addSelectProduct(sProductCode, sState, iSugar, iMilk){
 //    sTemplate = sTemplate.replace("{{state}}", sState);    
 //    sTemplate = sTemplate.replace("{{state2}}", sState);    
     sTemplate = sTemplate.replace("{{code}}", sProductCode);
+    sTemplate = sTemplate.replace("{{code}}", sProductCode);
+    sTemplate = sTemplate.replace("{{code}}", sProductCode);
+    sTemplate = sTemplate.replace("{{code}}", sProductCode);
+    if (iSugar > 0) {
+//        sTemplate = sTemplate.replace("{{ingredient}}", '<div style="background-color:red;">Sugar</div>');
+    } else {
+//        sTemplate = sTemplate.replace("{{ingredient}}", "");        
+    }
+
 //    sTemplate = sTemplate.replace("{{state-icon}}", sCheckIcon);
     $(".jqProductSliderGroup").append(sTemplate);
+    
     console.log('adding prod item with state:'+ sState+' and code:'+sProductCode);
     }
 

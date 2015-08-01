@@ -1,0 +1,85 @@
+/* Document classes*/
+body {
+    font-size:14px;
+    font-family:verdana;
+}
+/* Slider classes */
+.jqSliderGroup{
+    margin:0;
+    padding:0;
+    background-color: red;
+}
+.jqItem{
+    text-align: center;
+    background-color: transparent;
+}
+.slick-slider{
+    margin:0px !important;
+}
+
+/* Stat elements */
+.statIcon {
+    width:25%;
+    float:left;
+    padding:16.5px;
+    height:75px;
+    text-align: center;
+}
+.statText {
+    width:25%;
+    float:left;
+    height:75px;
+    padding:26px;
+    text-align: center;
+}
+.statLine {
+    width:75%;
+    float:left;
+    height:75px;
+    padding:26px;
+}
+
+/* Buttons */
+.colorShadeA1 {
+    background-color:#B73438;  
+    color:#ffffff;
+}
+.colorShadeA2 {
+    background-color:#B7347A;    
+    color:#ffffff;
+}
+.colorShadeA3 {
+    background-color:#B334B7;    
+    color:#ffffff;
+}
+
+.colorShadeB1 {
+    background-color:#3438b7;    
+    color:#ffffff;
+}
+.colorShadeB2 {
+    background-color:#347ab7;    
+    color:#ffffff;
+}
+.colorShadeB3 {
+    background-color:#34b7b3;    
+    color:#ffffff;
+}
+
+.colorShadeC1 {
+    background-color:#38b734;    
+    color:#ffffff;
+}
+.colorShadeC2 {
+    background-color:#7ab734;    
+    color:#ffffff;
+}
+.colorShadeC3 {
+    background-color:#b7b334;    
+    color:#ffffff;
+}
+
+.jqFullButton {
+    text-align: center;
+    padding: 16.5px;
+}
