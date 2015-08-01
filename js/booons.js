@@ -69,5 +69,14 @@ function addSelectProduct(sProductCode, sState, iSugar, iMilk){
     console.log('adding prod item with state:'+ sState+' and code:'+sProductCode);
     }
 
-
+function setSlider(sClassname) {
+    $('.'+sClassname).slick({
+      centerMode: true,
+      centerPadding: '200px', 
+      arrows :true,
+      centerPadding: '60px',
+      slidesToShow: 1,
+      focusOnSelect: true,
+    });  
+};
 

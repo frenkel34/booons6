@@ -2,7 +2,9 @@
 body {
     font-size:14px;
     font-family:verdana;
+    background-color:white;
 }
+
 /* Slider classes */
 .jqSliderGroup{
     margin:0;

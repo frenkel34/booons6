@@ -50,30 +50,6 @@ addItem("jqSubProductSliderGroup2", "template-select-subproduct-item-3", "tint",
 console.log('finishing population of select product sliders');
 console.log('starting initialisation of select product slider');
 
-$('.jqSubProductSliderGroup1').slick({
-  centerMode: true,
-  centerPadding: '200px', 
-  arrows :true,
-  centerPadding: '60px',
-  slidesToShow: 1,
-  focusOnSelect: true,
-});  
-$('.jqSubProductSliderGroup2').slick({
-  centerMode: true,
-  centerPadding: '200px', 
-  arrows :true,
-  centerPadding: '60px',
-  slidesToShow: 1,
-  focusOnSelect: true,
-});  
-$('.jqProductSliderGroup').slick({
-  centerMode: true,
-  centerPadding: '200px', 
-  arrows :true,
-  centerPadding: '60px',
-  slidesToShow: 1,
-  focusOnSelect: true,
-});  
 
 // Wat product selectie
     $('.jqProductItem').focus(function(){

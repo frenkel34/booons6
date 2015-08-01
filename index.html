@@ -134,22 +134,23 @@
         
 <!------------------------------------------------------------------------------------------>
         <template id="template-select-product-item">
-            <div class="jqItem jqProductItem" code="{{value}}"><a href="#"></span><i class="fa fa-{{code}} fa-5x"></i></a></div>
+            <div class="jqItem jqProductItem colorShadeB1" code="{{value}}"></span><i class="fa fa-{{code}} fa-5x"></i></div>
         </template>
         <template id="template-select-subproduct-item-0">
-            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i></a></div>
+            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-1">
-            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i></a></div>
+            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-2">
-            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></a></div>
+            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
         <template id="template-select-subproduct-item-3">
-            <div class="jqItem jq{{code}}Item" code="{{value}}"><a href="#"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></a></div>
+            <div class="jqItem jq{{code}}Item colorShadeB2" code="{{value}}"><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i><i class="fa fa-{{code}} fa-2x"></i></div>
         </template>
 
         <div class="appBrick" id="brickSelectProduct">
+            <div class="jqFullButton colorShadeC1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
             <div class="jqProductSliderGroup">
             </div>
             <div class="jqSubProductSliderGroup1">
@@ -158,6 +159,8 @@
             </div>
         </div>
 <script>
+
+    
     $('.jqProductItem').focus(function(){
        console.log('You have selected as a product:' + $(this).attr("code"));
     });
@@ -184,6 +187,9 @@
         console.log('Start round');
         $(".appBrick").hide();
         $("#brickSelectProduct").show();
+        setSlider("jqSubProductSliderGroup1");
+        setSlider("jqSubProductSliderGroup2");
+        setSlider("jqProductSliderGroup");        
     });
 </script>
 <script src="js/booons.js"></script>
