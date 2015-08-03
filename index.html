@@ -70,46 +70,36 @@
 
     </style>
     <body>
-
-        <template id="template-select-UserLogin-item">
-            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
-        </template>
-        <template id="template-select-GroupLogin-item">
-            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
-        </template>
-
-        <div class="appBrick" id="brickLogin">      
-            <div class="jqFullButton colorShadeC1 idButtonLogin"><i class="fa fa-check fa-3x"></i></div>
-            <div class="jqUserLoginSliderGroup jqSliderGroup colorShadeA2"></div>
-            <div class="jqGroupLoginSliderGroup jqSliderGroup colorShadeB3"></div>
-        </div>
-        
 <!------------------------------------------------------------------------------------------>
         <div class="appBrick" id="brickNav">
             <div>
-                <div class="jqNav" style="display:none;">
-                    <div class="jqNavLogin"><i class="fa fa-refresh fa-2x"></i></div>
-                    <div class="jqNavGroupIdle"><i class="fa fa-cloud fa-2x"></i></div>
+                <div class="jqNav" style="display:none; width:100vw;">
+                    <div class="idNavLogin jqNavItem"><i class="fa fa-refresh fa-2x"></i></div>
+                    <div class="idNavConfig jqNavItem"><i class="fa fa-cog fa-2x"></i></div>
                 </div>
             </div>
-            <div class="jqRowContainer" style="">
-                <div class="buttonNavToggle jqButton"><i class="fa fa-angle-double-down fa-3x"></i></div>
-            </div>
+            <div class="jqFullButton colorShadeB1 idButtonNavToggle"><i class="fa fa-angle-double-down fa-3x"></i></div>
         </div>
         <script>
-            $(".jqNavLogin").click(function(){
+            $(".idNavLogin").click(function(){
                console.log('goto: login'); 
                 $(".appBrick").hide();
-                $("#brickNav").show();
+                $("#brickNav").hide();
                 $("#brickLogin").show();
             });
-            $(".jqNavGroupIdle").click(function(){
-               console.log('goto: idle group'); 
+            $(".idNavConfig").click(function(){
+               console.log('goto: setup group'); 
                 $(".appBrick").hide();
-                $("#brickNav").show();
-                $("#brickSelectProduct").show();
+                $(".jqNav").hide();
+                $("#brickConfig").show();
+                setSlider("jqConfigSliderGroup1");
+                setSlider("jqConfigSliderGroup2");
+                setSlider("jqConfigSliderGroup3");
+                setSlider("jqConfigSliderGroup4");
+//                setSlider("jqSubProductSliderGroup2");
+//                setSlider("jqProductSliderGroup");        
             });
-            $(".buttonNavToggle").click(function(){
+            $(".idButtonNavToggle").click(function(){
                 console.log("test");
                 $(".jqNav").slideToggle( "slow" );
             });
@@ -119,6 +109,20 @@
                 height:75px;
             }
         </style>
+<!------------------------------------------------------------------------------------------>
+        <template id="template-select-UserLogin-item">
+            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
+        </template>
+        <template id="template-select-GroupLogin-item">
+            <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i><br/>{{value}}</div>
+        </template>
+
+        <div class="appBrick" id="brickLogin">      
+            <div class="jqFullButton colorShadeA1 idButtonLogin"><i class="fa fa-check fa-3x"></i></div>
+            <div class="jqUserLoginSliderGroup jqSliderGroup colorShadeD2"></div>
+            <div class="jqGroupLoginSliderGroup jqSliderGroup colorShadeD2"></div>
+        </div>
+        
 <!------------------------------------------------------------------------------------------>
         <div class="appBrick" id="brickIdleGroup">
             <div id="brickProgress">
@@ -135,6 +139,8 @@
             <div class="statText colorShadeB2" style="background-color: #;">13</div>
             <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-history fa-3x"></i></div>
             <div class="statText colorShadeC2" style="background-color: #;">5:13</div>
+            <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-coffee fa-3x"></i></div>
+            <div class="statLine" style="background-color: #;">Line text</div>
             <div class="users">
                 <div class="row user">
                     <div class="col-xs-10 username"><i class="fa fa-user"></i> Username</div>
@@ -144,10 +150,18 @@
             </div>
         </div>
 <!------------------------------------------------------------------------------------------>
-        <div class="appBrick" id="brickSlider">
+        <template id="template-config-product-item">
+            <div class="jqItem jqConfigItem colorShadeD{{value}}" code="{{value}}"></span><i class="fa fa-{{code}} fa-5x"></i></div>
+        </template>
 
-        Select
+        <div class="appBrick" id="brickConfig">
+        <div class="jqFullButton colorShadeA1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
+            <div class="jqConfigSliderGroup1 colorShadeD1"></div>
+            <div class="jqConfigSliderGroup2 colorShadeD1"></div>
+            <div class="jqConfigSliderGroup3 colorShadeD1"></div>
+        <div class="jqConfigSliderGroup4 colorShadeD1">
         </div>
+    </div>
         
 <!------------------------------------------------------------------------------------------>
         <template id="template-select-product-item">
@@ -176,12 +190,12 @@
                 </ul>
             </div>
 
-            <div class="jqFullButton colorShadeC1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
-            <div class="jqProductSliderGroup colorShadeB1">
+            <div class="jqFullButton colorShadeA1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
+            <div class="jqProductSliderGroup colorShadeD1">
             </div>
-            <div class="jqSubProductSliderGroup1 colorShadeB2">
+            <div class="jqSubProductSliderGroup1 colorShadeD1">
             </div>
-            <div class="jqSubProductSliderGroup2 colorShadeB2">
+            <div class="jqSubProductSliderGroup2 colorShadeD1">
             </div>
         </div>
 <script>
@@ -207,16 +221,21 @@
     
     console.log('start app');
     $(".appBrick").hide();
+    $("#brickNav").hide();
     $("#brickLogin").show();
     
     $(".idButtonLogin").click(function(){
         console.log('login');
         $(".appBrick").hide();
+        $(".jqNav").hide();
+        $("#brickNav").show();
         $("#brickIdleGroup").show();
     });
     $(".idButtonStartRound").click(function(){
         console.log('Start round');
         $(".appBrick").hide();
+        $(".jqNav").hide();
+        $("#brickNav").show();
         $("#brickSelectProduct").show();
         setSlider("jqSubProductSliderGroup1");
         setSlider("jqSubProductSliderGroup2");

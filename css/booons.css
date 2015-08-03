@@ -104,9 +104,16 @@ body {
     float:left;
     height:75px;
     padding:26px;
+    background-color: #fff;
 }
 
 /* Buttons */
+.jqNavItem {
+    padding:10px;
+    width: 10vw;
+    line-height: 75px;
+}
+
 .colorShadeA1 {
     background-color:#B73438;  
     color:#ffffff;
@@ -146,7 +153,23 @@ body {
     color:#ffffff;
 }
 
+
+.colorShadeD0 {
+    background-color:#fff;    
+    color:#B73438;
+}
+
+.colorShadeD1 {
+    background-color:#fff;    
+    color:#38b734;
+}
+.colorShadeD2 {
+    background-color:#fff;    
+    color:#000;
+}
+
 .jqFullButton {
     text-align: center;
     padding: 16.5px;
+    float:none;
 }

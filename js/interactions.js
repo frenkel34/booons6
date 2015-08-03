@@ -1,3 +1,15 @@
+//Populate the config form
+console.log('starting population of configuration form');
+addItem("jqConfigSliderGroup1", "template-config-product-item", "coffee", "1");
+addItem("jqConfigSliderGroup1", "template-config-product-item", "coffee", "0");
+addItem("jqConfigSliderGroup2", "template-config-product-item", "glass", "1");
+addItem("jqConfigSliderGroup2", "template-config-product-item", "glass", "0");
+addItem("jqConfigSliderGroup3", "template-config-product-item", "beer", "1");
+addItem("jqConfigSliderGroup3", "template-config-product-item", "beer", "0");
+addItem("jqConfigSliderGroup4", "template-config-product-item", "paw", "1");
+addItem("jqConfigSliderGroup5", "template-config-product-item", "paw", "0");
+
+
 //Populate the login form
 console.log('starting population of login form');
 addItem("jqUserLoginSliderGroup", "template-select-UserLogin-item", "user", "frenkel");
