@@ -190,7 +190,7 @@
                 </ul>
             </div>
 
-            <div class="jqFullButton colorShadeA1 idButtonStartRound2"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
+            <div class="jqFullButton colorShadeA1 idButtonSelectAmbush"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
             <div class="jqProductSliderGroup colorShadeD1">
             </div>
             <div class="jqSubProductSliderGroup1 colorShadeD1">
@@ -211,9 +211,34 @@
 </script>
 
 <!------------------------------------------------------------------------------------------>
-<div class="appBrick" id="brickSelectProduct">
-
-</div>
+		<template id="template-select-Ambush-item">
+           <div class="jqItem jq{{code}}Item" name="{{value}}"><i class="fa fa-{{code}} fa-5x"></i></div>
+		</template>
+		
+		
+		<div class="appBrick" id="brickSelectAmbush">
+			<div id="brickProgress">
+			    <!-- progressbar -->
+			    <ul id="progressbar">
+			        <li class="fa fa-users"></li>
+			        <li class="fa fa-coffee"></li>
+			        <li class="active fa fa-bomb"></li>
+			    </ul>
+			</div>
+		
+			<div class="jqFullButton colorShadeA1 idButtonSelectionDone"><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i><i class="fa fa-play fa-3x"></i></div>
+			
+			<div class="statIcon colorShadeB1" style="background-color: #;"><i class="fa fa-user fa-3x"></i></div>
+            <div class="statLine colorShadeB1" style="background-color: #;">Jérémy</div>
+            <div style="clear:both;"></div>
+            <div class="jqAmbushUserSliderGroupjeremy jqSliderGroup colorShadeB2"></div>
+            <div class="statIcon colorShadeC1" style="background-color: #;"><i class="fa fa-user fa-3x"></i></div>
+            <div class="statLine colorShadeC1" style="background-color: #;">Anouk</div>
+            <div style="clear:both;"></div>
+            <div class="jqAmbushUserSliderGroupjeremy jqSliderGroup colorShadeC2"></div>
+		</div>
+		
+		
 
 
 <script>
@@ -240,6 +265,21 @@
         setSlider("jqSubProductSliderGroup1");
         setSlider("jqSubProductSliderGroup2");
         setSlider("jqProductSliderGroup");        
+    });
+    $(".idButtonSelectAmbush").click(function(){
+        console.log('Select ambush');
+        $(".appBrick").hide();
+        $(".jqNav").hide();
+        $("#brickNav").show();
+        $("#brickSelectAmbush").show();  
+        setSlider("jqAmbushUserSliderGroupjeremy");   
+    });
+    $(".idButtonSelectionDone").click(function(){
+        console.log('login');
+        $(".appBrick").hide();
+        $(".jqNav").hide();
+        $("#brickNav").show();
+        $("#brickIdleGroup").show();
     });
 </script>
 <script src="js/booons.js"></script>

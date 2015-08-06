@@ -9,6 +9,13 @@ addItem("jqConfigSliderGroup3", "template-config-product-item", "beer", "0");
 addItem("jqConfigSliderGroup4", "template-config-product-item", "paw", "1");
 addItem("jqConfigSliderGroup5", "template-config-product-item", "paw", "0");
 
+//Populate the ambush form
+addItem("jqAmbushUserSliderGroupjeremy", "template-select-Ambush-item", "rocket", "1");
+addItem("jqAmbushUserSliderGroupjeremy", "template-select-Ambush-item", "bomb", "0");
+addItem("jqAmbushUserSliderGroupjeremy", "template-select-Ambush-item", "paw", "1");
+addItem("jqAmbushUserSliderGroupanouk", "template-select-Ambush-item", "rocket", "1");
+addItem("jqAmbushUserSliderGroupanouk", "template-select-Ambush-item", "bomb", "0");
+addItem("jqAmbushUserSliderGroupanouk", "template-select-Ambush-item", "paw", "1");
 
 //Populate the login form
 console.log('starting population of login form');
